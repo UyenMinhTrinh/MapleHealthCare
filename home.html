@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maple HealthCare</title>
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/">
+        <img class="logo" src="./images/MapleHealthcareLogo.png" alt="Maple HealthCare" />
+      </a>
+
+      <!-- hamburger (checkbox hack, no JS) -->
+      <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="menu-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<header class="hero">
+  <div class="hero-text">
+    <h1>Quality Care, <br>Right at Home</h1>
+    <p>Let Maple bring home care to you and your loved ones.</p>
+  </div>
+</header>
+
+  <main class="section">
+    <section class="intro-message">
+      <p>
+        We are not a large, faceless franchise. We are
+        <span class="highlight-yellow">Canadian nurses</span> caring for our neighbours in our
+        <span class="highlight-yellow">community area</span>.
+      </p>
+    </section>
+
+<!-- Decorative sticky hills -->
+<div class="sticky-hills" aria-hidden="true"></div>
+
+<section class="service-select-section">
+  <!-- Left Column: Service List -->
+  <div class="service-list">
+    <div class="section-heading">
+      <span class="section-title">Level of care</span>
+    </div>
+    <ul>
+      <li class="service-item active"><span class="service-label">Maple Home Support Care <span class="arrow">→</span></span></li>
+      <li class="service-item"><span class="service-label">Maple Nursing Care <span class="arrow">→</span></span></li>
+      <li class="service-item"><span class="service-label">Maple Companion Care <span class="arrow">→</span></span></li>
+      <li class="service-item"><span class="service-label">Maple Support Family <span class="arrow">→</span></span></li>
+    </ul>
+
+  </div>
+
+  <!-- Right Column: Image and Text -->
+  <div class="service-description">
+    <img id="service-img" src="../images/home-support.jpg" alt="Support Care">
+    <p id="service-text">
+      Maple helps you live independently with in-home services like meals, cleaning, personal care, and dementia support.
+    </p>
+  </div>
+</section>
+
+<section class="care-accordion">
+  <h4 class="section-title">Level of Care</h4>
+
+  <details class="care-acc">
+    <summary>Maple Home Support Care</summary>
+    <img src="images/home-support.jpg" alt="">
+    <p>Maple helps you live independently with in-home services like meals, cleaning, personal care, and dementia support.</p>
+  </details>
+
+  <details class="care-acc">
+    <summary>Maple Nursing Care</summary>
+    <img src="images/nursing.jpg" alt="">
+    <p>Clinical RN/RPN care at home: medication, wound care, monitoring, and coordination with your providers.</p>
+  </details>
+
+  <details class="care-acc">
+    <summary>Maple Companion Care</summary>
+    <img src="images/companion.jpg" alt="">
+    <p>Friendly companionship, activities, transportation, and social support to brighten everyday life.</p>
+  </details>
+
+  <details class="care-acc">
+    <summary>Maple Support Family</summary>
+    <img src="images/family.jpg" alt="">
+    <p>Guidance, resources, and long-term planning to support families with confidence.</p>
+  </details>
+</section>
+
+<section class="process">
+  <div class="process__inner">
+    <h2 class="process__title">
+      Our Process,<br/>Your Peace of Mind
+    </h2>
+
+    <div class="process__steps">
+      <!-- Step 1 -->
+      <article class="step-card">
+        <div class="step-card__num">1</div>
+        <h3 class="step-card__heading">Free In-Home Assessment</h3>
+        <div class="step-card__icon">
+          <img src="images/schedule.png" alt="Free In-Home Assessment">
+        </div>
+        <p class="step-card__body">A nurse visits to assess your needs and preferences.</p>
+      </article>
+
+      <!-- Step 2 -->
+      <article class="step-card">
+        <div class="step-card__num">2</div>
+        <h3 class="step-card__heading">Customized Care Plan</h3>
+        <div class="step-card__icon">
+          <img src="images/careplan.png" alt="Customized Care Plan">
+        </div>
+        <p class="step-card__body">We design a plan tailored to your health and routine.</p>
+      </article>
+
+      <!-- Step 3 -->
+      <article class="step-card">
+        <div class="step-card__num">3</div>
+        <h3 class="step-card__heading">Support Your Way</h3>
+        <div class="step-card__icon">
+          <img src="images/caregiver.png" alt="Support Your Way">
+        </div>
+        <p class="step-card__body">Your matched caregiver starts providing support.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+<script>
+  const services = [
+    {
+      img: '../images/home-support.jpg',
+      text: 'Maple helps you live independently with in-home services like meals, cleaning, personal care, and dementia support.'
+    },
+    {
+      img: '../images/nursing.jpg',
+      text: 'Our nursing care provides professional medical support tailored to your unique health needs, all from the comfort of your home.'
+    },
+    {
+      img: '../images/companion.jpg',
+      text: 'Companion care ensures emotional and social support for daily tasks and companionship that promotes mental well-being.'
+    },
+    {
+      img: './images/family.jpg',
+      text: 'Maple Support Family connects families with essential resources, education, and long-term planning tools.'
+    }
+  ];
+
+  const items = document.querySelectorAll('.service-item');
+
+  items.forEach((item, index) => {
+    item.addEventListener('mouseenter', () => {
+      // Update active style
+      document.querySelectorAll('.service-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+
+      // Update image and description
+      document.getElementById('service-img').src = services[index].img;
+      document.getElementById('service-text').innerText = services[index].text;
+    });
+  });
+</script>
+
+
+</script>
+</body>
+</html>

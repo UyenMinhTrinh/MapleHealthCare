@@ -1,70 +1,85 @@
-<!-- index.html - Home Page of Maple HealthCare -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maple HealthCare</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About us - Maple HealthCare</title>
+  <link rel="stylesheet" href="css/about.css">
 </head>
-<body class="bg-white text-gray-800">
+<body>
 
-  <!-- Header -->
-  <header class="bg-green-800 text-white p-6">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Maple HealthCare</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="services.html" class="hover:underline">Services</a>
-        <a href="employment.html" class="hover:underline">Employment</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-      </nav>
+  <!-- Navbar (same structure you use elsewhere) -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="brand">
+        <img class="logo" src="images/MapleHealthcareLogo.png" alt="Maple HealthCare">
+      </a>
+
+      <input id="nav-toggle" class="nav-toggle" type="checkbox"/>
+      <label for="nav-toggle" class="menu-btn"><span></span><span></span><span></span></label>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a class="active" href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- Hero Section -->
-  <section class="bg-gray-100 py-16">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-4">Let Maple bring home care to you and your loved ones.</h2>
-      <p class="text-lg mb-6">We are Canadian nurses caring for our neighbours. Personalized, dignified, professional care in your own home.</p>
-      <a href="contact.html" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-600">Book a Free Home Assessment</a>
-    </div>
-  </section>
+  <!-- About -->
+  <section class="about">
+    <div class="container">
 
-  <!-- Services Preview -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold text-center mb-8">Our Services</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white shadow-md rounded p-6">
-          <h4 class="font-bold text-xl mb-2">Home Support Care</h4>
-          <p>Meal prep, laundry, housekeeping, medication assistance, and personal care.</p>
-        </div>
-        <div class="bg-white shadow-md rounded p-6">
-          <h4 class="font-bold text-xl mb-2">Nursing Care</h4>
-          <p>Post-surgery recovery, wound care, rehabilitation, and nursing support at home.</p>
-        </div>
-        <div class="bg-white shadow-md rounded p-6">
-          <h4 class="font-bold text-xl mb-2">Palliative & Respite Care</h4>
-          <p>Care for chronic illness, cancer, and support for emotional and spiritual needs.</p>
-        </div>
+      <p class="eyebrow">About</p>
+
+      <div class="about-grid">
+        <!-- Left: Text -->
+        <header class="about-head">
+          <h1 class="about-title">
+            Maple Healthcare story
+          </h1>
+            <p class="lead">
+              Maple Health Care is dedicated to helping people remain safe and comfortable at home,
+              offering services that range from friendly companionship to skilled nursing care.
+              While we specialize in Senior and Palliative Care, our support is available to anyone in need.
+            </p>
+
+        </header>
+
+        <!-- Right: Image -->
+        <!-- Inside the about section -->
+        <figure class="about-media full-bleed">
+          <img src="images/family.jpg" alt="Nurse with patient">
+        </figure>
       </div>
+
+      <div class="about-body">
+        <p class="lead">
+          Ha began her career as a medical doctor in Vietnam, where she developed a deep passion for patient care and
+          community health. Seeking new opportunities to grow and contribute, she immigrated to Vancouver, Canada in 2010.
+          After re-establishing her career in a new country, she dedicated herself to nursing, working for many years as
+          a frontline registered nurse in hospitals and long-term care facilities. Her compassion for patients and her
+          strong leadership skills soon led her to become the leader of nursing care in both long-term care and retirement
+          homes in Vancouver and Victoria, BC.
+        </p>
+
+        <p class="lead">
+          Throughout this time, Ha continued to advance her education and professional development. She earned a certificate
+          in gerontological nursing (RN/NP), gaining specialized knowledge in caring for seniors and individuals with complex
+          medical needs. Her hands-on experience, combined with her advanced training, has allowed her to provide a high
+          standard of care for patients facing a wide range of health challenges.
+        </p>
+
+        <p class="lead">
+          In 2022, Ha relocated to Ottawa, Ontario with her family. Motivated by her personal values and a strong commitment
+          to supporting the local community, she founded Maple Health Care to bring compassionate, professional in-home care
+          to families in Ottawa. Through Maple Health Care, Ha continues her mission to help people remain safe, comfortable,
+          and independent in their own homes, while giving families peace of mind that their loved ones are in trusted hands.
+        </p>
     </div>
   </section>
 
-  <!-- Contact Call to Action -->
-  <section class="bg-green-50 py-12">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h3 class="text-2xl font-semibold mb-2">Need Help or Have Questions?</h3>
-      <p class="mb-4">We’re here to support your journey with care and compassion. Contact us to learn more.</p>
-      <a href="contact.html" class="inline-block bg-green-700 text-white px-6 py-3 rounded hover:bg-green-600">Contact Us</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-green-900 text-white text-center p-6">
-    <p>&copy; 2025 Maple HealthCare. 129 Desmond Ave, Kanata, ON. All rights reserved.</p>
-  </footer>
 </body>
 </html>

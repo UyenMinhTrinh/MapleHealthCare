@@ -3,117 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Maple HealthCare</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Our Services - Maple HealthCare</title>
+  <link rel="stylesheet" href="css/services.css">
 </head>
-<body class="bg-white text-gray-800">
-  <!-- Header -->
-  <header class="bg-green-800 text-white p-6">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Maple HealthCare</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="services.html" class="hover:underline font-bold">Services</a>
-        <a href="employment.html" class="hover:underline">Employment</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-      </nav>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/">
+        <img class="logo" src="./images/MapleHealthcareLogo.png" alt="Maple HealthCare" />
+      </a>
+
+      <!-- hamburger (checkbox hack, no JS) -->
+      <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="menu-btn" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- Full Services Content -->
-  <section class="py-12 px-4 max-w-4xl mx-auto space-y-6">
-    <h2 class="text-3xl font-bold mb-4 text-center">Our Services</h2>
+  <!-- Services Section -->
+  <section class="services">
+    <div class="services__inner">
+      <h2 class="services__title">Our Services</h2>
+      <p class="services__subtitle">
+        Maple Health Care helps you stay safely at home with support ranging from companionship to nursing care.
+        We specialize in <mark class="hl">Senior and Palliative Care</mark>, but our services are open to anyone in need.
+      </p>
 
-    <p>People live longer when they can remain in their homes. But, age, mobility, surgery and other complications can make it difficult to do on your own. And family are not always in town or available to provide daily support. That’s where we can help.</p>
+      <ul class="service-list">
+        <li>
+          <article class="service-card">
+            <div class="service-card__text">
+              <h3>Maple Companion Care</h3>
+              <p>Provides help with daily tasks like meals, cleaning, and personal care to support safe, independent living at home.</p>
+            </div>
+            <a class="btn-learn" href="companion.html">Learn more</a>
+          </article>
+        </li>
 
-    <p>Whether you need a Companion or more complex nursing care, Maple Health Care can provide the appropriate level of support you need to safely remain in your own home. Although we specialize in Senior Care and Palliative Care, we are certainly available to help anyone in need who might benefit from Home Health Care services.</p>
+        <li>
+          <article class="service-card">
+            <div class="service-card__text">
+              <h3>Maple Nursing Care</h3>
+              <p>RN/RPN support at home: medication management, wound care, monitoring, and coordination with your providers.</p>
+            </div>
+            <a class="btn-learn" href="nursing.html">Learn more</a>
+          </article>
+        </li>
 
-    <h3 class="text-2xl font-semibold">Level of Care</h3>
+        <li>
+          <article class="service-card">
+            <div class="service-card__text">
+              <h3>Maple Home Support Care</h3>
+              <p>Meal prep, light housekeeping, errands, bathing, and mobility support—tailored to your routine.</p>
+            </div>
+            <a class="btn-learn" href="home-support.html">Learn more</a>
+          </article>
+        </li>
 
-    <div class="space-y-4">
-      <div id="home-support">
-        <h4 class="text-xl font-bold">Maple Home Support Care</h4>
-        <p>Trust Maple to bring the care you need right to your home. We want you to live in your home for as long as you wish. Maple Home Support Care is designed to help you do just that by providing you with:</p>
-        <ul class="list-disc list-inside ml-5">
-          <li>Meal preparation</li>
-          <li>Laundry services</li>
-          <li>Housekeeping</li>
-          <li>Medication assistance</li>
-          <li>Personal Care (washing and dressing)</li>
-          <li>Alzheimer and dementia Support/Care</li>
-          <li>Home safety and security</li>
-        </ul>
-      </div>
+        <li>
+          <article class="service-card">
+            <div class="service-card__text">
+              <h3>Maple Support Family</h3>
+              <p>Reliable in-home support that helps busy families manage meals, chores, and daily tasks with confidence.</p>
+            </div>
+            <a class="btn-learn" href="support-family.html">Learn more</a>
+          </article>
+        </li>
 
-      <div id="nursing">
-        <h4 class="text-xl font-bold">Maple Nursing Care</h4>
-        <p>When you or someone you know is challenged by a recent stroke, surgery or hospital stay, we can help them in their home while they recover. Our Professional Nursing Care can offer support with:</p>
-        <ul class="list-disc list-inside ml-5">
-          <li>Recovery, rehabilitation and physiotherapy services</li>
-          <li>Medication management</li>
-          <li>Meal preparation</li>
-          <li>Nursing support</li>
-          <li>Wound care</li>
-        </ul>
-      </div>
-
-      <div id="palliative">
-        <h4 class="text-xl font-bold">Maple Palliative and Respite Care</h4>
-        <p>Family illness affects everyone. We’re here to help you and your loved ones deal with cancer and other chronic illness right in the comfort of their own homes. Call us for help with:</p>
-        <ul class="list-disc list-inside ml-5">
-          <li>Nursing Support</li>
-          <li>Pain mitigation</li>
-          <li>Medication management</li>
-          <li>A Customized Care Plan</li>
-          <li>Support for Physical, Emotional and Spiritual Needs</li>
-        </ul>
-      </div>
-
-      <div id="companion">
-        <h4 class="text-xl font-bold">Maple Companion Care</h4>
-        <p class="italic">"I worry about my mom"</p>
-        <p>Trust Maple to bring the care you need right to your home. Maple Companion Care is designed to help you do just that by providing you with:</p>
-        <ul class="list-disc list-inside ml-5">
-          <li>Meal preparation</li>
-          <li>Laundry services</li>
-          <li>Housekeeping</li>
-          <li>Medication supervision</li>
-          <li>Personal Care (washing and dressing)</li>
-          <li>Shopping</li>
-          <li>Home safety and security</li>
-          <li>Escorts to medical appointments or errands</li>
-        </ul>
-      </div>
-
-      <div id="family">
-        <h4 class="text-xl font-bold">Maple Family Support</h4>
-        <p class="italic">"A new baby and a toddler. I need help!"</p>
-        <p>With a new baby and a growing family your hands are full. We can give you a hand around the home with daily tasks that will free up your time to attend to the kids. We offer support with:</p>
-        <ul class="list-disc list-inside ml-5">
-          <li>Meal preparation</li>
-          <li>Laundry services</li>
-          <li>Recovery from C-section</li>
-          <li>Housekeeping</li>
-          <li>Personal Care (washing and dressing)</li>
-          <li>Shopping for the family</li>
-        </ul>
-      </div>
-
-      <p>We can provide a Homemaker, Companion, Nurse’s Aide, or professional Nurse for complex care or hospice services. Whatever your situation, we can meet all of your healthcare needs.</p>
-      <p>Our team includes experienced Home Care Nurses and Support Workers specializing in Hospice, Palliative, Alzheimer’s, and Dementia Care.</p>
-
-      <h4 class="text-xl font-bold">Free Home Assessment by a Registered Nurse, GNC(C)</h4>
-      <p>Our goal is to match the ideal caregiver to your unique needs. We prefer to meet with the client and their family before beginning services to assess requirements and personal preferences. This helps us ensure the most important part of homecare: <strong>Consistency of Care</strong>.</p>
-
-      <p>We conduct a full assessment with the Nursing Supervisor, reviewing medical history and desired outcomes to craft a personalized Care Plan. We also consider cultural preferences, dietary needs, language, transportation availability, and scheduling when selecting the caregiver.</p>
-
-      <p>We assist in arranging necessary medical equipment at home, such as handrails, commodes, or mobility aids, to ensure comfort and safety.</p>
-
-      <h4 class="text-xl font-bold">Change in Care</h4>
-      <p>Care needs can evolve. We’re flexible and ready to adjust caregiver hours or services as needed. If residential care becomes necessary, we can continue support through Added Care and private companionship services.</p>
-
-      <p>Even if you decide not to hire Maple after your assessment, we’re still happy to help you navigate your options and advocate for your wellbeing.</p>
+        <li>
+          <article class="service-card">
+            <div class="service-card__text">
+              <h3>Maple Palliative & Respite Care</h3>
+              <p>Comfort-focused care, symptom management, and family relief to support quality time at home.</p>
+            </div>
+            <a class="btn-learn" href="palliative-respite.html">Learn more</a>
+          </article>
+        </li>
+      </ul>
     </div>
   </section>
 

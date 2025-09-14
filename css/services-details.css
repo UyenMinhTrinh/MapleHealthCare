@@ -1,0 +1,217 @@
+:root {
+  --bg: #FEFBF6;
+  --text: #4B4D39;
+  --muted: #6A6A6A;
+  --accent: #A2C26C;
+  --highlight: #FAC95F;
+
+  --border: #4B4D39;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --container: 900px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+img { max-width: 100%; display: block; }
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid #DDDDDD;
+  transition: box-shadow .2s ease;
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 84px;
+  object-fit: contain;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1;
+  padding: .25rem .1rem;
+  border-radius: 6px;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.nav-links a.active {
+  color: var(--accent);
+  background-color: transparent;
+  outline: none;
+}
+
+/* Mobile nav toggle */
+.nav-toggle { display: none; }
+
+.menu-btn {
+  display: none;
+  width: 40px;
+  height: 32px;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.menu-btn span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--text);
+  border-radius: 3px;
+  transition: transform .25s ease, opacity .2s ease, top .25s ease;
+}
+.menu-btn span:nth-child(1){ top: 4px; }
+.menu-btn span:nth-child(2){ top: 14px; }
+.menu-btn span:nth-child(3){ top: 24px; }
+
+/* Animate hamburger into X */
+.nav-toggle:checked + .menu-btn span:nth-child(1){
+  top: 14px; transform: rotate(45deg);
+}
+.nav-toggle:checked + .menu-btn span:nth-child(2){ opacity: 0; }
+.nav-toggle:checked + .menu-btn span:nth-child(3){
+  top: 14px; transform: rotate(-45deg);
+}
+
+/* Mobile menu layout */
+@media (max-width: 768px){
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--bg);
+    padding: 1rem;
+  }
+}
+
+/* hero/intro section */
+.services {
+  background: var(--bg);
+  padding: 24px 16px 48px;
+}
+.services__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.services__title {
+  margin: 0 0 12px;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+  line-height: 1.25;
+}
+.services__subtitle {
+  max-width: 700px;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--muted);
+}
+.btn-learn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--text);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  background: var(--bg);
+  color: var(--text);
+}
+.btn-learn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* info cards */
+.service-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.service-card h3 {
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.service-card ul {
+  margin: 0; padding-left: 1.2rem;
+  line-height: 1.6;
+}
+.service-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* background highlight (green section) */
+.bg-accent {
+  background: #C7DFA7;
+  padding: 40px 20px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+}
+
+/* responsive tweaks */
+@media (max-width: 800px){
+  .services__title { font-size: 1.6rem; }
+  .services__subtitle { font-size: .95rem; color: var(--text); }
+  .service-card { padding: 16px; }
+  /* tighten the gap from the hero to the first block */
+.services:first-of-type {            /* the hero section */
+  padding-bottom: 12px;              /* was larger */
+}
+
+.services:first-of-type .services__title { margin-bottom: 6px; }
+.services:first-of-type .services__subtitle { margin-bottom: 8px; }
+.services:first-of-type .btn-learn { margin-bottom: 8px; }
+
+/* reduce top padding on the next section (the blocks container) */
+.services + .services {              /* the section right after the hero */
+  padding-top: 12px;                 /* was larger */
+}
+
+/* ensure the first card hugs the top, others keep spacing */
+.services + .services .service-card { margin-top: 16px; }
+.services + .services .service-card:first-child { margin-top: 0; }
+
+}
+

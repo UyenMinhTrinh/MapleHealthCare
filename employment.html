@@ -3,76 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employment Opportunities - Maple HealthCare</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Employment — Maple Healthcare</title>
+  <link rel="stylesheet" href="css/employment.css">
 </head>
-<body class="bg-white text-gray-800">
-  <!-- Header -->
-  <header class="bg-green-800 text-white p-6">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Maple HealthCare</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="services.html" class="hover:underline">Services</a>
-        <a href="employment.html" class="hover:underline font-bold">Employment</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-      </nav>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="brand">
+        <img class="logo" src="images/MapleHealthcareLogo.png" alt="Maple HealthCare">
+      </a>
+
+      <input id="nav-toggle" class="nav-toggle" type="checkbox"/>
+      <label for="nav-toggle" class="menu-btn"><span></span><span></span><span></span></label>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="employment.html">Employment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- Employment Section -->
-  <section class="py-12 px-4 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4 text-center">Join Our Care Team</h2>
-    <p class="mb-8 text-center">We’re looking for passionate individuals to join our home healthcare team in Ottawa. Whether you’re a student nurse, PSW, or a seasoned RN—we want to hear from you.</p>
+  <!-- Employment -->
+  <section class="employment">
+    <div class="container">
+      <h1 class="employment-title">Employment Opportunities</h1>
+      <p class="employment-intro">
+        Join the Maple HealthCare team and help us provide compassionate, professional care in the Ottawa area.
+      </p>
 
-    <div class="space-y-8">
-      <div>
-        <h3 class="text-xl font-semibold">Personal Support Workers (PSWs)</h3>
-        <ul class="list-disc list-inside ml-4">
-          <li>Support seniors at home</li>
-          <li>Short and long-term positions</li>
-          <li>Vehicle and license a plus</li>
-        </ul>
+      <div class="employment-cards">
+
+        <article class="job-card">
+          <h3>Personal Support Workers</h3>
+          <p>
+            We are currently looking for Community Health Workers, Resident Care Attendants, or foreign-trained nurses;
+            short-term and long-term positions available in the Ottawa area to assist seniors living in their own homes.
+          </p>
+          <p><strong>Apply:</strong> Send applications directly to <a href="mailto:maple4care@gmail.com">maple4care@gmail.com</a></p>
+        </article>
+
+        <article class="job-card">
+          <h3>Personal Support Workers with Vehicle</h3>
+          <p>
+            We are always looking for Personal Support Workers who drive and have their own vehicles.
+          </p>
+        </article>
+
+        <article class="job-card">
+          <h3>Live-in Caregivers</h3>
+          <p>
+            Full-time, part-time, and temporary positions available.
+            Must be willing to share weekend coverage with co-workers
+            (Example: one works Sunday–Monday–Tuesday and the other works Wednesday–Thursday–Friday–Saturday).
+            Driver’s license and own vehicle an asset, but not necessary.
+          </p>
+        </article>
+
+        <article class="job-card">
+          <h3>Registered Nurses / LPNs</h3>
+          <p>
+            We can always use a few more RNs and LPNs looking to pick up extra shifts on their days off.
+            Ideal for nurses who enjoy one-on-one bedside nursing or wish to keep their skills current in
+            care facilities such as retirement homes or long-term care.
+          </p>
+        </article>
+
+        <article class="job-card">
+          <h3>Student Nurses</h3>
+          <p>
+            We love hiring Student Nurses every summer. Our team benefits from enthusiastic new staff to help cover
+            vacations for regular staff, and students benefit by gaining invaluable hands-on nursing experience and
+            confidence. Must be willing to accept both shorter and longer shifts.
+          </p>
+        </article>
+
       </div>
 
-      <div>
-        <h3 class="text-xl font-semibold">Live-in Caregivers</h3>
-        <ul class="list-disc list-inside ml-4">
-          <li>Full-time, part-time & temporary shifts</li>
-          <li>Flexible weekend schedule</li>
-          <li>Team-oriented work-sharing</li>
+      <div class="apply-box">
+        <h2>How to Apply</h2>
+        <p>You may send your resume:</p>
+        <ul>
+          <li><strong>By email:</strong> <a href="mailto:maple4care@gmail.com">maple4care@gmail.com</a></li>
+          <li><strong>By post:</strong><br>
+            Maple Healthcare<br>
+            129 Desmond Ave<br>
+            Kanata, ON K2L 1E8
+          </li>
         </ul>
       </div>
-
-      <div>
-        <h3 class="text-xl font-semibold">Registered Nurses / LPNs</h3>
-        <ul class="list-disc list-inside ml-4">
-          <li>Support one-on-one bedside care</li>
-          <li>Pick up extra shifts at care facilities</li>
-          <li>Work in retirement and long-term care</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="text-xl font-semibold">Student Nurses (Summer)</h3>
-        <ul class="list-disc list-inside ml-4">
-          <li>Real hands-on experience</li>
-          <li>Flexible shift lengths</li>
-          <li>Great mentorship environment</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="mt-10 text-center">
-      <p class="mb-2">Email your resume to: <a href="mailto:maple4care@gmail.com" class="text-green-700 font-medium">maple4care@gmail.com</a></p>
-      <p>Or mail to: 129 Desmond Ave, Kanata, ON K2L 1E8</p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-green-900 text-white text-center p-6 mt-12">
-    <p>&copy; 2025 Maple HealthCare. All rights reserved.</p>
-  </footer>
 </body>
 </html>

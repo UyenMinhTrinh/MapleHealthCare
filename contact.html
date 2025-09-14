@@ -1,57 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Maple HealthCare</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Maple Healthcare</title>
+  <link rel="stylesheet" href="css/contact.css">
 </head>
-<body class="bg-white text-gray-800">
-  <!-- Header -->
-  <header class="bg-green-800 text-white p-6">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Maple HealthCare</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="services.html" class="hover:underline">Services</a>
-        <a href="employment.html" class="hover:underline">Employment</a>
-        <a href="contact.html" class="hover:underline font-bold">Contact</a>
-      </nav>
+<body>
+
+  <!-- Navbar (same pattern as other pages) -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="brand">
+        <img class="logo" src="images/MapleHealthcareLogo.png" alt="Maple HealthCare">
+      </a>
+
+      <input id="nav-toggle" class="nav-toggle" type="checkbox"/>
+      <label for="nav-toggle" class="menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- Contact Section -->
-  <section class="py-12 px-4 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
-    <p class="text-center mb-10">Have a question or need more info? Send us a message and we’ll be in touch soon.</p>
+  <!-- Contact -->
+  <section class="contact">
+    <div class="container">
 
-    <form action="https://formspree.io/f/xwkgybvn" method="POST" class="space-y-6">
-      <div>
-        <label for="name" class="block mb-1 font-medium">Full Name</label>
-        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded">
-      </div>
-      <div>
-        <label for="email" class="block mb-1 font-medium">Email Address</label>
-        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded">
-      </div>
-      <div>
-        <label for="message" class="block mb-1 font-medium">Message</label>
-        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded"></textarea>
-      </div>
-      <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-600">Send Message</button>
-    </form>
+      <header class="contact-head">
+        <h1 class="contact-title">Contact Us</h1>
+        <p class="contact-intro">
+          We’re here to help you and your family with compassionate, professional care.
+          Reach out if you have questions, need more information, or would like to book a free consultation.
+        </p>
+      </header>
 
-    <div class="mt-10 text-center">
-      <p class="mb-2 font-medium">Or reach out directly:</p>
-      <p>Email: <a href="mailto:maple4care@gmail.com" class="text-green-700">maple4care@gmail.com</a></p>
-      <p>Address: 129 Desmond Ave, Kanata, ON K2L 1E8</p>
+      <div class="contact-grid">
+        <!-- Details -->
+        <aside class="contact-details" aria-labelledby="contact-details-heading">
+          <h2 id="contact-details-heading" class="visually-hidden">Contact details</h2>
+
+          <div class="detail">
+            <span class="detail-label">Phone</span>
+            <a href="tel:+16131234567" class="detail-value">(613) 123-4567</a>
+          </div>
+
+          <div class="detail">
+            <span class="detail-label">Email</span>
+            <a href="mailto:info@maplehealthcare.ca" class="detail-value">info@maplehealthcare.ca</a>
+          </div>
+
+          <div class="detail">
+            <span class="detail-label">Office</span>
+            <address class="detail-value">
+              129 Desmond Ave, Kanata<br> Ottawa, ON K2L 1E8
+            </address>
+          </div>
+
+          <div class="detail">
+            <span class="detail-label">Hours</span>
+            <span class="detail-value">Mon–Fri, 9:00am–5:00pm</span>
+          </div>
+
+          <p class="small-note">
+            Prefer to talk? Call us and we’ll schedule a free in-home assessment.
+          </p>
+        </aside>
+
+        <!-- Form -->
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Your Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field two-col">
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div>
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Maple Companion Care</option>
+                <option>Maple Nursing Care</option>
+                <option>Maple Home Support Care</option>
+                <option>Maple Support Family</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-learn">Send Message</button>
+          <p class="privacy small-note">
+            By sending this form you agree that Maple Healthcare may contact you about your inquiry.
+          </p>
+        </form>
+      </div>
+
+      <!-- Optional map placeholder; swap iframe src with your map if you like -->
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11225.688218106203!2d-75.89260403726787!3d45.29989933046386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccdffa3073cfbdb%3A0x3906579f88d588e2!2s129%20Desmond%20Ave%2C%20Ottawa%2C%20ON%20K2L%201E8!5e0!3m2!1sen!2sca!4v1757890060903!5m2!1sen!2sca"
+          width="100%"
+          height="350"
+          style="border:0; border-radius: 24px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-green-900 text-white text-center p-6 mt-12">
-    <p>&copy; 2025 Maple HealthCare. All rights reserved.</p>
-  </footer>
 </body>
 </html>
