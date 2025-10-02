@@ -49,12 +49,12 @@
 
           <div class="detail">
             <span class="detail-label">Phone</span>
-            <a href="tel:+16131234567" class="detail-value">(613) 123-4567</a>
+            <a href="tel:+16048390394" class="detail-value">(604) 839-0394</a>
           </div>
 
           <div class="detail">
             <span class="detail-label">Email</span>
-            <a href="mailto:info@maplehealthcare.ca" class="detail-value">info@maplehealthcare.ca</a>
+            <a href="mailto:maple4care@gmail.com" class="detail-value">maple4care@gmail.com</a>
           </div>
 
           <div class="detail">
@@ -75,7 +75,7 @@
         </aside>
 
         <!-- Form -->
-        <form class="contact-form" action="#" method="post" novalidate>
+        <form class="contact-form" action="https://formspree.io/f/mjkargdy" method="POST">
           <div class="field">
             <label for="name">Your Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
@@ -108,27 +108,72 @@
             <textarea id="message" name="message" rows="6" required></textarea>
           </div>
 
+          <!-- Honeypot spam trap -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <!-- Optional: redirect to a thank-you page -->
+          <input type="hidden" name="_redirect" value="https://mapleforhealth.ca/thank-you.html">
+
           <button type="submit" class="btn-learn">Send Message</button>
+
           <p class="privacy small-note">
             By sending this form you agree that Maple Healthcare may contact you about your inquiry.
           </p>
         </form>
-      </div>
+      </div><!-- closes .contact-grid -->
 
-      <!-- Optional map placeholder; swap iframe src with your map if you like -->
+      <!-- Map block OUTSIDE the grid so it spans full width -->
       <div class="map-wrap">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11225.688218106203!2d-75.89260403726787!3d45.29989933046386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccdffa3073cfbdb%3A0x3906579f88d588e2!2s129%20Desmond%20Ave%2C%20Ottawa%2C%20ON%20K2L%201E8!5e0!3m2!1sen!2sca!4v1757890060903!5m2!1sen!2sca"
-          width="100%"
-          height="350"
-          style="border:0; border-radius: 24px;"
-          allowfullscreen=""
+          class="map-frame"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Maple Healthcare office"></iframe>
       </div>
+
     </div>
   </section>
+
+    <!-- Footer (same structure you use elsewhere) -->
+   <footer class="site-footer light-footer">
+  <div class="footer-container">
+    <!-- Logo & About -->
+    <div class="footer-brand">
+      <img src="images/MapleHealthcareLogo.png" alt="Maple HealthCare Logo" class="footer-logo">
+      <p>
+        Compassionate, professional home care services across Ottawa.  
+        Supporting seniors, families, and individuals with trusted care.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><strong>Phone:</strong> <a href="tel:+16048390394">(604) 839-0394</a></p>
+      <p><strong>Email:</strong> <a href="mailto:maple4care@gmail.com">maple4care@gmail.com</a></p>
+      <p><strong>Office:</strong><br>129 Desmond Ave, Kanata<br>Ottawa, ON K2L 1E8</p>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Maple HealthCare. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>

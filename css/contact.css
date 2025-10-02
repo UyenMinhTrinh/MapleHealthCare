@@ -215,12 +215,162 @@ input:focus,select:focus,textarea:focus{
   color:#fff;
 }
 
-/* Optional map placeholder */
-.map-wrap{
-  margin-top: 32px;
-  border-radius: 24px;
-  overflow: hidden; /* ensures rounded corners apply to iframe */
+/* Map styled like cards */
+.map-wrap {
+  margin-top: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  overflow: hidden;
 }
+
+.map-frame {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
 
 /* Small typography helpers */
 .privacy{margin-left:.5rem}
+
+/* ===== Thank You page ===== */
+.thankyou {
+  background: var(--bg);
+}
+
+.thankyou .container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+.thankyou-head {
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+.thankyou-title {
+  margin: 0 0 .25rem;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.thankyou-intro {
+  margin: .25rem auto var(--space-3);
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-width: 58ch;
+}
+
+.thankyou-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  padding: var(--space-4);
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thankyou-card .logo {
+  height: 84px;
+  object-fit: contain;
+  margin: 0 auto var(--space-2);
+}
+
+.thankyou-actions {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+}
+
+.thankyou-note {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-top: var(--space-2);
+}
+
+/* Footer */
+.light-footer {
+  background: #c8dc9f;  /* soft green like “Our Process” */
+  color: var(--text);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.light-footer .footer-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.light-footer .footer-logo {
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.light-footer .footer-brand p {
+  font-size: .95rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.light-footer .footer-links h4,
+.light-footer .footer-contact h4 {
+  margin-bottom: .75rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.light-footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.light-footer .footer-links li { margin-bottom: .5rem; }
+.light-footer .footer-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: .95rem;
+  transition: color .2s ease;
+}
+.light-footer .footer-links a:hover { color: var(--accent); }
+
+.light-footer .footer-contact p {
+  font-size: .95rem;
+  margin: .25rem 0;
+}
+.light-footer .footer-contact a {
+  color: var(--text);
+  text-decoration: none;
+}
+.light-footer .footer-contact a:hover { text-decoration: underline; }
+
+.light-footer .footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin-top: var(--space-4);
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .light-footer .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .light-footer .footer-brand,
+  .light-footer .footer-links,
+  .light-footer .footer-contact { margin-bottom: var(--space-3); }
+}

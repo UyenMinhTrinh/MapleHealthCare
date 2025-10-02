@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
   background-image: url('../images/home.png');
   background-size: cover;
   background-position: center;
-  min-height: 90vh;
+  height: 70vh;
   display: flex;
   justify-content: flex-end; /* right-aligned text block */
   align-items: center;
@@ -138,23 +138,6 @@ img { max-width: 100%; display: block; }
   font-size: clamp(1.125rem, 3.2vw, 2.1875rem); /* 18px → 35px */
   line-height: 1.25;
   margin: 0;
-}
-
-/* ========= Intro Message ========= */
-.intro-message {
-  max-width: var(--container);
-  margin: 60px auto;
-  padding: 0 var(--space-2);
-  font-weight: 650;
-  font-size: clamp(1.5rem, 4.8vw, 3rem);   /* 24px → 48px */
-  line-height: 1.35;                       /* tighter lines for big text */
-  text-align: center;
-}
-
-.highlight-yellow {
-  background-color: var(--highlight);
-  padding: .05em .35em;
-  border-radius: 20px;
 }
 
 /* ========= Section: Level of Care ========= */
@@ -282,7 +265,8 @@ img { max-width: 100%; display: block; }
 
   .hero {
     justify-content: center;
-    min-height: 70vh;
+    height: 45vh;
+    min-height: 260px;
     padding: 0 var(--space-2);
   }
 
@@ -409,7 +393,7 @@ img { max-width: 100%; display: block; }
 /* small phones */
 @media (max-width: 480px){
   .logo{ height: 64px; }
-  .hero{ min-height: 64vh; }
+  .hero{ min-height: 38vh; min-height: 220px; }
   .btn-outline{ padding: 10px 22px; border-width: 3px; }
 }
 
@@ -672,4 +656,81 @@ img { max-width: 100%; display: block; }
   .care-acc[open] img{ transform: scale(1); }
 }
 
+/* Footer */
+.light-footer {
+  background: #c8dc9f;  /* soft green like “Our Process” */
+  color: var(--text);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+}
 
+.light-footer .footer-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.light-footer .footer-logo {
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.light-footer .footer-brand p {
+  font-size: .95rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.light-footer .footer-links h4,
+.light-footer .footer-contact h4 {
+  margin-bottom: .75rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.light-footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.light-footer .footer-links li { margin-bottom: .5rem; }
+.light-footer .footer-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: .95rem;
+  transition: color .2s ease;
+}
+.light-footer .footer-links a:hover { color: var(--accent); }
+
+.light-footer .footer-contact p {
+  font-size: .95rem;
+  margin: .25rem 0;
+}
+.light-footer .footer-contact a {
+  color: var(--text);
+  text-decoration: none;
+}
+.light-footer .footer-contact a:hover { text-decoration: underline; }
+
+.light-footer .footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin-top: var(--space-4);
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .light-footer .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .light-footer .footer-brand,
+  .light-footer .footer-links,
+  .light-footer .footer-contact { margin-bottom: var(--space-3); }
+}

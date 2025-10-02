@@ -207,3 +207,81 @@ body { overflow-x: hidden; }
   .about-media.full-bleed img {
     border-radius: 24px; /* restore rounded corners on desktop */
   }
+/* Footer */
+.light-footer {
+  background: #c8dc9f;  /* soft green like “Our Process” */
+  color: var(--text);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.light-footer .footer-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.light-footer .footer-logo {
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.light-footer .footer-brand p {
+  font-size: .95rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.light-footer .footer-links h4,
+.light-footer .footer-contact h4 {
+  margin-bottom: .75rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.light-footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.light-footer .footer-links li { margin-bottom: .5rem; }
+.light-footer .footer-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: .95rem;
+  transition: color .2s ease;
+}
+.light-footer .footer-links a:hover { color: var(--accent); }
+
+.light-footer .footer-contact p {
+  font-size: .95rem;
+  margin: .25rem 0;
+}
+.light-footer .footer-contact a {
+  color: var(--text);
+  text-decoration: none;
+}
+.light-footer .footer-contact a:hover { text-decoration: underline; }
+
+.light-footer .footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin-top: var(--space-4);
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .light-footer .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .light-footer .footer-brand,
+  .light-footer .footer-links,
+  .light-footer .footer-contact { margin-bottom: var(--space-3); }
+}
