@@ -286,14 +286,3 @@ body { overflow-x: hidden; }
   .light-footer .footer-links,
   .light-footer .footer-contact { margin-bottom: var(--space-3); }
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .light-footer .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .light-footer .footer-brand,
-  .light-footer .footer-links,
-  .light-footer .footer-contact { margin-bottom: var(--space-3); }
-}
