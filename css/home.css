@@ -656,6 +656,56 @@ img { max-width: 100%; display: block; }
   .care-acc[open] img{ transform: scale(1); }
 }
 
+/* ========= Care Buttons ========= */
+.care-btn {
+  display: inline-block;
+  background: #A2C26C;          /* your accent green */
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 40px;          /* pill style */
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 16px;
+  transition: background .25s ease, transform .15s ease;
+}
+
+.care-btn:hover,
+.care-btn:focus-visible {
+  background: #8EAF5B;
+  transform: translateY(-2px);
+}
+
+.care-btn:active {
+  transform: translateY(0px);
+}
+
+/* ===== Full-width Care Button ===== */
+.care-btn-wide {
+  display: block;             /* makes it full width */
+  width: 100%;                /* full container width */
+  background: var(--accent);  /* Maple light green */
+  color: white;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background .25s ease, transform .15s ease;
+}
+
+.care-btn-wide:hover,
+.care-btn-wide:focus-visible {
+  background: #8EAF5B;   /* darker green */
+  transform: translateY(-2px);
+}
+
+.care-btn-wide:active {
+  transform: translateY(0);
+}
+
 /* Footer */
 .light-footer {
   background: #c8dc9f;  /* soft green like “Our Process” */
